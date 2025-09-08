@@ -56,6 +56,10 @@ namespace pryCastilloAgendaContacto
 
             txtContacto.Text = "";
             mtbNumero.Text = "";
+
+
+            txtContacto.Text = "";
+            mtbNumero.Text = "";
         }
     }
 }

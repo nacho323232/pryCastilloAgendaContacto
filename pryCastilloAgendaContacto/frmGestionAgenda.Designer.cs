@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionAgenda));
             lblContacto = new Label();
             lblNumero = new Label();
             mtbNumero = new MaskedTextBox();
@@ -123,8 +124,9 @@
             Controls.Add(mtbNumero);
             Controls.Add(lblNumero);
             Controls.Add(lblContacto);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmGestionAgenda";
-            Text = "frmGestionAgenda";
+            Text = "Inicio";
             ResumeLayout(false);
             PerformLayout();
         }
