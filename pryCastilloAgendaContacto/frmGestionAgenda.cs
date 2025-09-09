@@ -16,9 +16,17 @@ namespace pryCastilloAgendaContacto
         {
             InitializeComponent();
         }
+        //Variables
         string vContacto = "";
         string vNumero = "";
 
+        //Vectores
+        string[] vecTelefono = new string[5];
+        string[] vecContacto = new string[5];
+
+        //Indice
+        int vContador = 0;
+        DateTime vFecha = DateTime.Now;
 
         private void txtContacto_TextChanged(object sender, EventArgs e)
         {
@@ -48,6 +56,9 @@ namespace pryCastilloAgendaContacto
 
         private void btnAgendar_Click(object sender, EventArgs e)
         {
+            vecTelefono[vContador] = mtbNumero.Text;
+            vecContacto[vContador] = txtContacto.Text;
+
             vContacto = txtContacto.Text;
             vNumero = mtbNumero.Text;
 
@@ -57,9 +68,12 @@ namespace pryCastilloAgendaContacto
             txtContacto.Text = "";
             mtbNumero.Text = "";
 
+            vContador = vContador + 1;
+            lblCantContacto.Text = "Cantidad de Contacto " + vContador;
+            lblFecha.Text = "Fecha y Hora" + vFecha;
 
-            txtContacto.Text = "";
-            mtbNumero.Text = "";
+            txtContacto.Focus();
+
         }
     }
 }

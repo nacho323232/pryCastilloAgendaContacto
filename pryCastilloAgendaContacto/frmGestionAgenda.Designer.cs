@@ -36,6 +36,9 @@
             lstResumen = new ListBox();
             btnAgendar = new Button();
             btnCancelar = new Button();
+            lblCantContacto = new Label();
+            lblFecha = new Label();
+            lblFechaHora = new Label();
             SuspendLayout();
             // 
             // lblContacto
@@ -111,12 +114,44 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // lblCantContacto
+            // 
+            lblCantContacto.AutoSize = true;
+            lblCantContacto.Font = new Font("Segoe UI", 12F);
+            lblCantContacto.Location = new Point(21, 332);
+            lblCantContacto.Name = "lblCantContacto";
+            lblCantContacto.Size = new Size(72, 21);
+            lblCantContacto.TabIndex = 7;
+            lblCantContacto.Text = "Cantidad";
+            // 
+            // lblFecha
+            // 
+            lblFecha.AutoSize = true;
+            lblFecha.Font = new Font("Segoe UI", 12F);
+            lblFecha.Location = new Point(21, 371);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(98, 21);
+            lblFecha.TabIndex = 8;
+            lblFecha.Text = "Fecha y hora";
+            // 
+            // lblFechaHora
+            // 
+            lblFechaHora.AutoSize = true;
+            lblFechaHora.Font = new Font("Segoe UI", 12F);
+            lblFechaHora.Location = new Point(140, 371);
+            lblFechaHora.Name = "lblFechaHora";
+            lblFechaHora.Size = new Size(0, 21);
+            lblFechaHora.TabIndex = 10;
+            // 
             // frmGestionAgenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 224, 192);
-            ClientSize = new Size(352, 374);
+            ClientSize = new Size(380, 435);
+            Controls.Add(lblFechaHora);
+            Controls.Add(lblFecha);
+            Controls.Add(lblCantContacto);
             Controls.Add(btnCancelar);
             Controls.Add(btnAgendar);
             Controls.Add(lstResumen);
@@ -126,6 +161,7 @@
             Controls.Add(lblContacto);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmGestionAgenda";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Inicio";
             ResumeLayout(false);
             PerformLayout();
@@ -140,5 +176,8 @@
         private ListBox lstResumen;
         private Button btnAgendar;
         private Button btnCancelar;
+        private Label lblCantContacto;
+        private Label lblFecha;
+        private Label lblFechaHora;
     }
 }
